@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Turistearaucania - Registro de proveedores</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../SCRIPTS/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../SCRIPTS/CSS/modern-business.css" rel="stylesheet">
+    
+    
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+      
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline" action="/PHP/search.php" method="post">
+          <input class="form-control mr-sm-2" type="search" placeholder="Encuentra lo que buscas" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.php">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../PHP/search.php">Buscar</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="../PHP/search.php">Gastronomia</a>
+                <a class="dropdown-item" href="../PHP/search.php">Servicios de guia</a>
+                <a class="dropdown-item" href="../PHP/search.php">Alojamiento</a>
+                <a class="dropdown-item" href="../PHP/search.php">Arriendo de equipacion</a>
+                <a class="dropdown-item" href="../PHP/search.php">Single Portfolio Item</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ubicacion
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="../PHP/search.php">Costa</a>
+                <a class="dropdown-item" href="../PHP/search.php">Centro</a>
+                <a class="dropdown-item" href="../PHP/search.php">Andino</a>
+              </div>
+            </li>
+            
+
+            <li class="nav-item">
+              <a class="nav-link" href="../PHP/about.php">Acerca de</a>
+            </li>
+            
+            <li class="nav-item  ">
+              <a class="nav-link  one" href="../HTML/login.html" id="navbarDropdownMenuLink" >
+                <img src="../IMAGE/icons/user.png" class="login">
+              </a>
+                   
+            </li>
+        
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container principal">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Formulario de registro
+        <small>Proveedores</small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Registro de proveedores</li>
+      </ol>
+
+      <p>Si eres un proveedor de servicios turísticos, te invitamos a registrarte en nuestra web. Podrás publicitar tu negocio a través de la red, agregando una descripción de tu(s) servicio(s), fotos y ubicación del mismo. </p>
+      <p>Completa el formulario a continuación, evaluaremos tu situación y lo publicaremos a la brevedad de cumplir con los términos. </p>
+
+      <h3>Datos personales</h3>
+      <form  action="../PHP/validationprovider.php" method="post" id="formularioregistro" autocomplete="off">
+		  <div class="form-group row">
+		    <label for="name" class="col-sm-2 col-form-label">Nombres</label>
+		    <div class="col-sm-4">
+		      <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
+		    </div>
+		    <label for="name" class="col-sm-2 col-form-label">Apellidos</label>
+		    <div class="col-sm-4">
+		      <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
+		    </div>
+		</div>
+		<div class="form-group row">
+
+		    <label for="rut" class="col-sm-2 col-form-label">R.U.N.</label>
+		    <div class="col-sm-4">
+		      <input type="text" class="form-control" id="rutpersonal" name="rutpersonal" placeholder="12345678-3">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="fecha" class="col-sm-2 col-form-label">Fecha de nacimiento</label>
+		    <div class="col-sm-4">
+		      <input type="date" class="form-control" id="fecha" name="fecha">
+		    </div>
+		    <label for="fecha" class="col-sm-2 col-form-label">Correo electronico</label>
+		    <div class="col-sm-4">
+		      <input type="email" class="form-control" id="email" placeholder="example@example.com" name="email">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="codigo01 fono" class="col-sm-2 col-form-label">Telefono</label>
+		    <div class="col-sm-1">
+		      <input type="select" class="form-control" id="codigo01" name="telefonopersonal01" pattern="[0-9]{3}" placeholder="452">
+		    </div>
+		    <div class="col-sm-3">
+		      <input type="text" class="form-control" id="fono" name="telefonopersonal02" placeholder="12345678" pattern="[0-9]{8}">
+		    </div>
+		    <label for="codigo02 cel" class="col-sm-2 col-form-label">Celular</label>
+		    <div class="col-sm-1">
+		      <input type="select" class="form-control" id="codigo02" name="celularpersonal01" pattern="[0-9]{3}" placeholder="569">
+		    </div>
+		    <div class="col-sm-3">
+		      <input type="text" class="form-control" id="cel"  name="celularpersonal02"  placeholder="12345678" pattern="[0-9]{8}">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="password1" class="col-sm-2 col-form-label">Contraseña</label>
+		    <div class="col-sm-4">
+		      <input type="password" autocomplete="false" class="form-control" id="password1" name="password" ">
+		    </div>
+		    <label for="passwordconfirmation" class="col-sm-2 col-form-label">Confirmar contraseña</label>
+		    <div class="col-sm-4">
+		      <input type="password" class="form-control" id="passwordconfirmation" >
+		    </div>
+		  </div>	
+
+
+		  <hr>
+		  <h3>Datos comerciales del servicio</h3>
+		  <p>Porfavor, ingrese los datos comerciales de su servicio. Considere los puntos a continuación para la completación de los datos:</p>
+		  <ul>
+		  	<li>Si desea publicar más de un servicio, ingrese en principio uno de ellos. </li>
+		  	<li>Si no cuenta con R.U.T comercial, puede dejar el espacio en blanco. Sin embargo, la revisión de su servicio pasara por otros procesos, detallados en los términos y condiciones. </li>
+		  </ul>
+
+		  
+		  
+		  <div class="form-group row">
+		    <label for="namecomercial" class="col-sm-2 col-form-label">Nombre del servicio</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="namecomercial" name="namecomercial" placeholder="Nombre">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="rutcomercial" class="col-sm-2 col-form-label">R.U.T</label>
+		    <div class="col-sm-4">
+		      <input type="text" class="form-control" id="rutcomercial" name="rutcomercial" placeholder="99345678-3">
+		    </div>
+		    <label for="girocomercial" class="col-sm-1 col-form-label">Giro</label>
+		    <div class="col-sm-5">
+		      <select  class="form-control" id="girocomercial">
+		          <option>--Seleccione--</option>
+			      <option>Alimentacion</option>
+			      <option>Guias Turisticos</option>
+			      <option>Alojamiento</option>
+			      <option>Arriendo de implementacion</option>
+			      <option>Otros</option>
+			    </select>
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="rutcomercial" class="col-sm-2 col-form-label">Telefono</label>
+		    <div class="col-sm-4">
+		      <input type="tel" class="form-control" id="telefonocomercial01" name="telefonocomercial01" placeholder="612345">
+		    </div>
+		    <label for="rutcomercial" class="col-sm-1 col-form-label">Celular</label>
+		    <div class="col-sm-5">
+		      <input type="tel" class="form-control" id="celularcomercial01" name="celularcomercial01" placeholder="9988776655">
+		    </div>
+		  </div>
+
+		  <div class="form-group row">
+		    <label for="ubicacion" class="col-sm-2 col-form-label">Ubicacion</label>
+		  </div>
+
+		  <hr>
+
+		  <div class="form-check">
+		    <input class="form-check-input" type="checkbox" value="OK" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+			    Acepto los <a href="#">Terminos y condiciones de servicio</a>
+			</label>
+		  </div>
+
+		  <div class="form-group row">
+
+		  	<div class="g-recaptcha" data-sitekey="6LfLwX8UAAAAAPmR5OQa0L5DWI0xCGxqXJ-7QyNj"></div>
+		  </div>
+		  <button type="submit" class="btn btn-dark mb-2">Registrarse</button>
+		</form>
+
+
+		  
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../SCRIPTS/bootstrap/jquery/jquery.min.js"></script>
+    <script src="../SCRIPTS/bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../SCRIPTS/JS/validarformularios.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Turistearaucania - Acceder</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../SCRIPTS/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../SCRIPTS/CSS/modern-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+      
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline" action="/PHP/search.php" method="post">
+          <input class="form-control mr-sm-2" type="search" placeholder="Encuentra lo que buscas" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.php">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../PHP/search.php">Buscar</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="../PHP/search.php">Gastronomia</a>
+                <a class="dropdown-item" href="../PHP/search.php">Servicios de guia</a>
+                <a class="dropdown-item" href="../PHP/search.php">Alojamiento</a>
+                <a class="dropdown-item" href="../PHP/search.php">Arriendo de equipacion</a>
+                <a class="dropdown-item" href="../PHP/search.php">Single Portfolio Item</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ubicacion
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="../PHP/search.php">Costa</a>
+                <a class="dropdown-item" href="../PHP/search.php">Centro</a>
+                <a class="dropdown-item" href="../PHP/search.php">Andino</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../PHP/about.php">Acerca de</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container principal">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Iniciar sesion
+        <small>General</small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Acceder</li>
+      </ol>
+
+      
+      <!-- /.row -->
+
+      <!-- Contact Form -->
+      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <div class="row" style="padding-top: 100px; padding-bottom: 100px;  ">
+        <div class="col-sm-2"></div>
+
+
+        <div class="col-sm-8" style="border: 1px solid #e9ebee; padding-top: 80px; padding-bottom: 80px; padding-right: 30px;padding-left: 30px; ">
+          <h3 align="center">Acceda a su cuenta desde aqui</h3>
+          <form action="../PHP/verification.php" method="post">
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Correo</label>
+                <input type="email" class="form-control" id="name" required data-validation-required-message="Porfavor ingrese su correo." name="email">
+                
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Contraseña</label>
+                <input  type="password" name="password" class="form-control" id="phone" required data-validation-required-message="Porfavor ingrese su contraseña.">
+              </div>
+            </div>
+            <div class="form-group">
+              <label><a href="../PHP/restorepassword.php">¿Olvidó su contraseña? </a></label><br>
+              <label><a href="../HTML/accountcreation.html">Registrarse </a></label><br>
+              <label><a href="../HTML/provider_register.html">¿Quieres publicar tu servicio? </a></label>
+            </div>
+            
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button type="submit" class="btn btn-primary btn-dark" >Acceder</button>
+          </form>
+        </div>
+
+        <div class="col-sm-2"></div>
+        
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../SCRIPTS/bootstrap/jquery/jquery.min.js"></script>
+    <script src="../SCRIPTS/bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="../SCRIPTS/JS/jqBootstrapValidation.js"></script>
+    <script src="../SCRIPTS/JS/contact_me.js"></script>
+
+  </body>
+
+</html>
