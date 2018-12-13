@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Turistearaucania - Registro de proveedores</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../SCRIPTS/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="../SCRIPTS/CSS/modern-business.css" rel="stylesheet">
-    
-    
-
+    <style type="text/css">
+      .forms{
+        background-image: url(../IMAGE/logo/originalimagegrey.png);background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -84,7 +89,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container principal">
+    <div class="container principal forms" >
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Formulario de registro
@@ -102,25 +107,28 @@
       <p>Completa el formulario a continuación, evaluaremos tu situación y lo publicaremos a la brevedad de cumplir con los términos. </p>
 
       <h3>Datos personales</h3>
-      <form  action="../PHP/validationprovider.php" method="post" id="formularioregistro" autocomplete="off">
-		  <div class="form-group row">
+      <form  action="../PHP/validationprovider.php" method="post" id="formularioregistro" autocomplete="off" >
+		<div class="form-group row">
 		    <label for="name" class="col-sm-2 col-form-label">Nombres</label>
 		    <div class="col-sm-4">
-		      <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
+		      <input type="text" class="form-control" name="names" id="names" placeholder="Nombres sin apellidos">
 		    </div>
-		    <label for="name" class="col-sm-2 col-form-label">Apellidos</label>
+		    <label for="apellido1" class="col-sm-2 col-form-label">Apellido Paterno</label>
 		    <div class="col-sm-4">
-		      <input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo">
+		      <input type="text" class="form-control" name="apellido1" id="apellido1" placeholder="Primer apellido">
 		    </div>
 		</div>
 		<div class="form-group row">
-
+			<label for="apellido2" class="col-sm-2 col-form-label">Apellido Materno</label>
+		    <div class="col-sm-4">
+		      <input type="text" class="form-control" name="apellido2" id="apellido2" placeholder="Segundo apellido">
+		    </div>
 		    <label for="rut" class="col-sm-2 col-form-label">R.U.N.</label>
 		    <div class="col-sm-4">
 		      <input type="text" class="form-control" id="rutpersonal" name="rutpersonal" placeholder="12345678-3">
 		    </div>
-		  </div>
-		  <div class="form-group row">
+		</div>
+		<div class="form-group row">
 		    <label for="fecha" class="col-sm-2 col-form-label">Fecha de nacimiento</label>
 		    <div class="col-sm-4">
 		      <input type="date" class="form-control" id="fecha" name="fecha">
@@ -129,24 +137,19 @@
 		    <div class="col-sm-4">
 		      <input type="email" class="form-control" id="email" placeholder="example@example.com" name="email">
 		    </div>
-		  </div>
-		  <div class="form-group row">
-		    <label for="codigo01 fono" class="col-sm-2 col-form-label">Telefono</label>
-		    <div class="col-sm-1">
-		      <input type="select" class="form-control" id="codigo01" name="telefonopersonal01" pattern="[0-9]{3}" placeholder="452">
+		</div>
+		<div class="form-group row">
+		    <label for="telefonopersonal" class="col-sm-2 col-form-label">Telefono</label>
+		    <div class="col-sm-4">
+		      <input type="tel" class="form-control" id="telefonopersonal" name="telefonopersonal" placeholder="665544111" >
 		    </div>
-		    <div class="col-sm-3">
-		      <input type="text" class="form-control" id="fono" name="telefonopersonal02" placeholder="12345678" pattern="[0-9]{8}">
+		    <label for="celularpersonal" class="col-sm-2 col-form-label">Celular</label>
+		    
+		    <div class="col-sm-4">
+		      <input type="tel" class="form-control" id="celularpersonal"  name="celularpersonal"  placeholder="998877665" >
 		    </div>
-		    <label for="codigo02 cel" class="col-sm-2 col-form-label">Celular</label>
-		    <div class="col-sm-1">
-		      <input type="select" class="form-control" id="codigo02" name="celularpersonal01" pattern="[0-9]{3}" placeholder="569">
-		    </div>
-		    <div class="col-sm-3">
-		      <input type="text" class="form-control" id="cel"  name="celularpersonal02"  placeholder="12345678" pattern="[0-9]{8}">
-		    </div>
-		  </div>
-		  <div class="form-group row">
+		</div>
+		<div class="form-group row">
 		    <label for="password1" class="col-sm-2 col-form-label">Contraseña</label>
 		    <div class="col-sm-4">
 		      <input type="password" autocomplete="false" class="form-control" id="password1" name="password" ">
@@ -181,24 +184,24 @@
 		    </div>
 		    <label for="girocomercial" class="col-sm-1 col-form-label">Giro</label>
 		    <div class="col-sm-5">
-		      <select  class="form-control" id="girocomercial">
-		          <option>--Seleccione--</option>
-			      <option>Alimentacion</option>
-			      <option>Guias Turisticos</option>
-			      <option>Alojamiento</option>
-			      <option>Arriendo de implementacion</option>
-			      <option>Otros</option>
+		      <select  class="form-control" id="girocomercial" name="girocomercial">
+		          <option value="">--Seleccione--</option>
+			      <option value="Alimentacion">Alimentacion</option>
+			      <option value="Guias">Guias Turisticos</option>
+			      <option value="Alojamiento">Alojamiento</option>
+			      <option value="Arriendo">Arriendo de implementacion</option>
+			      <option value="Otros">Otros</option>
 			    </select>
 		    </div>
 		  </div>
 		  <div class="form-group row">
-		    <label for="rutcomercial" class="col-sm-2 col-form-label">Telefono</label>
+		    <label for="telefonocomercial" class="col-sm-2 col-form-label">Telefono</label>
 		    <div class="col-sm-4">
-		      <input type="tel" class="form-control" id="telefonocomercial01" name="telefonocomercial01" placeholder="612345">
+		      <input type="tel" class="form-control" id="telefonocomercial" name="telefonocomercial" placeholder="665544111">
 		    </div>
-		    <label for="rutcomercial" class="col-sm-1 col-form-label">Celular</label>
+		    <label for="celularcomercial" class="col-sm-1 col-form-label">Celular</label>
 		    <div class="col-sm-5">
-		      <input type="tel" class="form-control" id="celularcomercial01" name="celularcomercial01" placeholder="9988776655">
+		      <input type="tel" class="form-control" id="celularcomercial" name="celularcomercial" placeholder="998877665">
 		    </div>
 		  </div>
 

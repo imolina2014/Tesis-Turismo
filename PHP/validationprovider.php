@@ -2,42 +2,49 @@
 	require_once '../APP/init.php';
 	$response = $recaptcha -> verify($_POST['g-recaptcha-response']); 	
 
-	$name = $_POST["name"];
+	$name = $_POST["names"];
+	$apellido1 = $_POST["apellido1"];
+	$apellido2 = $_POST["apellido2"];
 	$rutp = $_POST["rutpersonal"];
 	$fecha = $_POST["fecha"];
 	$email = $_POST["email"];
-	$tel01 = $_POST["telefonopersonal01"];
-	$tel02 = $_POST["telefonopersonal02"];
-	$cel01 = $_POST["celularpersonal01"];
-	$cel02 = $_POST["celularpersonal02"];
+	$telper = $_POST["telefonopersonal"];
+	$celper = $_POST["celularpersonal"];
 	$passw = $_POST["password"];
 
 	$namec = $_POST["namecomercial"];
 	$rutc = $_POST["rutcomercial"];
-	// $rutp = $_POST["girocomercial"];
+	$telcom = $_POST["telefonocomercial"];
+	$celcom = $_POST["celularcomercial"];
+	$giro = $_POST["girocomercial"];
 	// $rutp = $_POST["ubicacion"];
 
 	echo"
 		Proveedor:<br><br>
-			Nombre: ".$name. "<br>
+			Nombre: ".$name." ".$apellido1." ".$apellido2. "<br>
 			Rut: ".$rutp. "<br>
 			Fecha de Nacimiento: ".$fecha. "<br>
 			Email: ".$email. "<br>
-			Telefono: ".$tel01."-".$tel02. "<br>
-			Celular: ".$cel01."-".$cel02. "<br>
+			Telefono: ".$telper. "<br>
+			Celular: ".$celper. "<br>
 			Password: ".$passw. "<br>
 		<br><br>	<br><br>
 		Local: <br><br>
 			Nombre: ".$namec . "<br>
 			Rut:	".$rutc. "<br>
+			Telefono:	".$telcom. "<br>
+			Celular:	".$celcom. "<br>
+			Giro:	".$giro. "<br>
+
 
 
 	";
-	if($response->isSuccess()){
-		echo"OK";
-	}else{
-		echo"Failed";
-	}
+	// if($response->isSuccess()){
+	// 	echo"OK";
+	// }else{
+	// 	echo"Failed";
+	// }
+	////VALIDACION DE CAPTCHA...IMPLEMENTAR LUEGO DE QUE ESTE TODO OK
 
 
 
